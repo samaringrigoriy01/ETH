@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/stm32/ETH/build/Debug/cmake_install.cmake",
+		"C:/stm32/ETH/build/Debug/cmake/stm32cubemx/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

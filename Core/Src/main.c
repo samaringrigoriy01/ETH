@@ -23,8 +23,16 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "lan8742.h"
+#include "parseSV.h"
+
 #include <stdlib.h>
 #include <stdio.h>
+#include "inttypes.h"
+
+#include <stdarg.h>
+#include <stdbool.h>
+#include <ctype.h>
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,21 +56,21 @@ typedef struct
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-#if defined ( __ICCARM__ ) /*!< IAR Compiler */
-#pragma location=0x30000000
-ETH_DMADescTypeDef  DMARxDscrTab[ETH_RX_DESC_CNT]; /* Ethernet Rx DMA Descriptors */
-#pragma location=0x30000080
-ETH_DMADescTypeDef  DMATxDscrTab[ETH_TX_DESC_CNT]; /* Ethernet Tx DMA Descriptors */
+#if defined(__ICCARM__) /*!< IAR Compiler */
+#pragma location = 0x30000000
+ETH_DMADescTypeDef DMARxDscrTab[ETH_RX_DESC_CNT]; /* Ethernet Rx DMA Descriptors */
+#pragma location = 0x30000080
+ETH_DMADescTypeDef DMATxDscrTab[ETH_TX_DESC_CNT]; /* Ethernet Tx DMA Descriptors */
 
-#elif defined ( __CC_ARM )  /* MDK ARM Compiler */
+#elif defined(__CC_ARM) /* MDK ARM Compiler */
 
-__attribute__((at(0x30000000))) ETH_DMADescTypeDef  DMARxDscrTab[ETH_RX_DESC_CNT]; /* Ethernet Rx DMA Descriptors */
-__attribute__((at(0x30000080))) ETH_DMADescTypeDef  DMATxDscrTab[ETH_TX_DESC_CNT]; /* Ethernet Tx DMA Descriptors */
+__attribute__((at(0x30000000))) ETH_DMADescTypeDef DMARxDscrTab[ETH_RX_DESC_CNT]; /* Ethernet Rx DMA Descriptors */
+__attribute__((at(0x30000080))) ETH_DMADescTypeDef DMATxDscrTab[ETH_TX_DESC_CNT]; /* Ethernet Tx DMA Descriptors */
 
-#elif defined ( __GNUC__ ) /* GNU Compiler */
+#elif defined(__GNUC__) /* GNU Compiler */
 
 ETH_DMADescTypeDef DMARxDscrTab[ETH_RX_DESC_CNT] __attribute__((section(".RxDescripSection"))); /* Ethernet Rx DMA Descriptors */
-ETH_DMADescTypeDef DMATxDscrTab[ETH_TX_DESC_CNT] __attribute__((section(".TxDescripSection")));   /* Ethernet Tx DMA Descriptors */
+ETH_DMADescTypeDef DMATxDscrTab[ETH_TX_DESC_CNT] __attribute__((section(".TxDescripSection"))); /* Ethernet Tx DMA Descriptors */
 #endif
 
 ETH_TxPacketConfig TxConfig;
@@ -106,23 +114,28 @@ lan8742_IOCtx_t LAN8742_IOCtx = {ETH_PHY_INTERFACE_Init,
                                  ETH_PHY_INTERFACE_WriteReg,
                                  ETH_PHY_INTERFACE_ReadReg,
                                  ETH_PHY_INTERFACE_GetTick};
-ETH_BufferTypeDef *p=NULL;
 
 
-
-
+void print_buf(int32_t *buf){
+  printf("\n");
+  for (int l = 64; l < 320; l++)
+  {
+    printf("%" PRId32 ", ", buf[l]);
+  }
+  printf("\n");
+}
 
 /* USER CODE END 0 */
 
 /**
-  * @brief  The application entry point.
-  * @retval int
-  */
+ * @brief  The application entry point.
+ * @retval int
+ */
 int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-	__NOP();
+  __NOP();
   /* USER CODE END 1 */
 
   /* MPU Configuration--------------------------------------------------------*/
@@ -155,6 +168,28 @@ int main(void)
   MX_SPI2_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+  int8_t *data = NULL;
+  int32_t cur_A[320] = {0};
+  int32_t cur_B[320] = {0};
+  int32_t cur_C[320] = {0};
+  int32_t cur_0[320] = {0};
+
+  int8_t i = 0;
+  int8_t flag = 0;
+
+  int16_t cntEror = 0;
+
+  int8_t *pack = NULL;
+
+
+  int16_t fsmpCnt = 0;
+  int16_t lsmpCnt = 0;
+
+  int32_t error = 0;
+
+
+  int16_t len_pack = 0;
+printf("Start!\n");
 
   /* USER CODE END 2 */
 
@@ -165,39 +200,101 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    p = NULL;
-    HAL_ETH_ReadData(&heth, (void **)&p);
-    if (p != NULL)
-    {
-      __NOP();
+    pack = NULL;
+    HAL_ETH_ReadData(&heth, (void **)&pack);
+    len_pack = heth.RxDescList.RxDataLength;
+    if (i < 40 && len_pack == 793)
+    {  
+      if(i == 8){
+        fsmpCnt = get_value_int16(data, SMPCNT_ASDU_1);
+      } else if (i == 39)
+      {
+        lsmpCnt = get_value_int16(data, SMPCNT_ASDU_8);
+      }
+
+      data = pack + 32;
+
+      get_data_sv_256(cur_0, data, FB_CURRENT_0, i);
+      get_data_sv_256(cur_A, data, FB_CURRENT_A, i);
+      get_data_sv_256(cur_B, data, FB_CURRENT_B, i);
+      get_data_sv_256(cur_C, data, FB_CURRENT_C, i);
+
+      if (cur_A[319] != 0)
+      {
+        flag = 1;
+        i = 0;
+      }else {
+        flag = 0;
+      }
+      i++;
     }
-    free(p);
+    free(pack);
+    //Если флаг поднят, переходим от приема к обработке
+    if (flag == 1){
+
+      fsmpCnt = reverse_bytes_16(fsmpCnt);
+      lsmpCnt = reverse_bytes_16(lsmpCnt);
+      //Проверяем были ли пропущены пакеты
+      error = lsmpCnt - fsmpCnt;
+
+      if (error == 255 || error == -12545){
+        cntEror--;
+        printf("\nOK. Count = %d\n", cntEror);
+        __NOP();
+      }else{
+        cntEror++;
+        printf("\nLost pack!. Count = %d\n", cntEror);
+      }
+
+      //Производим реверс байт
+      revers_bytes_buf(cur_0);
+      revers_bytes_buf(cur_A);
+      revers_bytes_buf(cur_B);
+      revers_bytes_buf(cur_C);
+/*  
+      //Выводим в юарт
+
+      print_buf(cur_A);
+      print_buf(cur_B);
+      print_buf(cur_C);
+      print_buf(cur_0);
+
+*/
+
+      //Обнуляем буферы
+      for (int j = 0; j < 320; j++)
+      {
+        cur_A[j] = 0;
+      }
+    }
   }
   /* USER CODE END 3 */
 }
 
 /**
-  * @brief System Clock Configuration
-  * @retval None
-  */
+ * @brief System Clock Configuration
+ * @retval None
+ */
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
   /** Supply configuration update enable
-  */
+   */
   HAL_PWREx_ConfigSupply(PWR_LDO_SUPPLY);
 
   /** Configure the main internal regulator output voltage
-  */
+   */
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE3);
 
-  while(!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY)) {}
+  while (!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY))
+  {
+  }
 
   /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
+   * in the RCC_OscInitTypeDef structure.
+   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
@@ -216,10 +313,8 @@ void SystemClock_Config(void)
   }
 
   /** Initializes the CPU, AHB and APB buses clocks
-  */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2
-                              |RCC_CLOCKTYPE_D3PCLK1|RCC_CLOCKTYPE_D1PCLK1;
+   */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2 | RCC_CLOCKTYPE_D3PCLK1 | RCC_CLOCKTYPE_D1PCLK1;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.SYSCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_HCLK_DIV2;
@@ -235,16 +330,16 @@ void SystemClock_Config(void)
 }
 
 /**
-  * @brief Peripherals Common Clock Configuration
-  * @retval None
-  */
+ * @brief Peripherals Common Clock Configuration
+ * @retval None
+ */
 void PeriphCommonClock_Config(void)
 {
   RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
 
   /** Initializes the peripherals clock
-  */
-  PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_SPI2|RCC_PERIPHCLK_SPI1;
+   */
+  PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_SPI2 | RCC_PERIPHCLK_SPI1;
   PeriphClkInitStruct.PLL2.PLL2M = 5;
   PeriphClkInitStruct.PLL2.PLL2N = 100;
   PeriphClkInitStruct.PLL2.PLL2P = 2;
@@ -261,10 +356,10 @@ void PeriphCommonClock_Config(void)
 }
 
 /**
-  * @brief ETH Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief ETH Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_ETH_Init(void)
 {
 
@@ -272,7 +367,7 @@ static void MX_ETH_Init(void)
 
   /* USER CODE END ETH_Init 0 */
 
-   static uint8_t MACAddr[6];
+  static uint8_t MACAddr[6];
 
   /* USER CODE BEGIN ETH_Init 1 */
 
@@ -299,29 +394,28 @@ static void MX_ETH_Init(void)
     Error_Handler();
   }
 
-  memset(&TxConfig, 0 , sizeof(ETH_TxPacketConfig));
+  memset(&TxConfig, 0, sizeof(ETH_TxPacketConfig));
   TxConfig.Attributes = ETH_TX_PACKETS_FEATURES_CSUM | ETH_TX_PACKETS_FEATURES_CRCPAD;
   TxConfig.ChecksumCtrl = ETH_CHECKSUM_IPHDR_PAYLOAD_INSERT_PHDR_CALC;
   TxConfig.CRCPadCtrl = ETH_CRC_PAD_INSERT;
   /* USER CODE BEGIN ETH_Init 2 */
 
-	  LAN8742_RegisterBusIO(&LAN8742, &LAN8742_IOCtx);
+  LAN8742_RegisterBusIO(&LAN8742, &LAN8742_IOCtx);
 
-	  /* Initialize the LAN8742 ETH PHY */
-	  LAN8742_Init(&LAN8742);
+  /* Initialize the LAN8742 ETH PHY */
+  LAN8742_Init(&LAN8742);
 
-	  /* Initialize link speed negotiation and start Ethernet peripheral */
-	  ETH_StartLink();
+  /* Initialize link speed negotiation and start Ethernet peripheral */
+  ETH_StartLink();
 
   /* USER CODE END ETH_Init 2 */
-
 }
 
 /**
-  * @brief I2C1 Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief I2C1 Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_I2C1_Init(void)
 {
 
@@ -347,14 +441,14 @@ static void MX_I2C1_Init(void)
   }
 
   /** Configure Analogue filter
-  */
+   */
   if (HAL_I2CEx_ConfigAnalogFilter(&hi2c1, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
   {
     Error_Handler();
   }
 
   /** Configure Digital filter
-  */
+   */
   if (HAL_I2CEx_ConfigDigitalFilter(&hi2c1, 0) != HAL_OK)
   {
     Error_Handler();
@@ -362,14 +456,13 @@ static void MX_I2C1_Init(void)
   /* USER CODE BEGIN I2C1_Init 2 */
 
   /* USER CODE END I2C1_Init 2 */
-
 }
 
 /**
-  * @brief SPI1 Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief SPI1 Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_SPI1_Init(void)
 {
 
@@ -410,14 +503,13 @@ static void MX_SPI1_Init(void)
   /* USER CODE BEGIN SPI1_Init 2 */
 
   /* USER CODE END SPI1_Init 2 */
-
 }
 
 /**
-  * @brief SPI2 Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief SPI2 Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_SPI2_Init(void)
 {
 
@@ -458,14 +550,13 @@ static void MX_SPI2_Init(void)
   /* USER CODE BEGIN SPI2_Init 2 */
 
   /* USER CODE END SPI2_Init 2 */
-
 }
 
 /**
-  * @brief USART1 Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief USART1 Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_USART1_UART_Init(void)
 {
 
@@ -477,7 +568,7 @@ static void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 115200;
+  huart1.Init.BaudRate = 9600;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
@@ -506,19 +597,18 @@ static void MX_USART1_UART_Init(void)
   /* USER CODE BEGIN USART1_Init 2 */
 
   /* USER CODE END USART1_Init 2 */
-
 }
 
 /**
-  * @brief GPIO Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief GPIO Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOH_CLK_ENABLE();
@@ -547,8 +637,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-/* USER CODE END MX_GPIO_Init_2 */
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
@@ -666,31 +756,39 @@ void HAL_ETH_RxAllocateCallback(uint8_t **buff)
 
 void HAL_ETH_RxLinkCallback(void **pStart, void **pEnd, uint8_t *buff, uint16_t Length)
 {
-	ETH_BufferTypeDef **ppStart = (ETH_BufferTypeDef **)pStart;
-	ETH_BufferTypeDef **ppEnd = (ETH_BufferTypeDef **)pEnd;
-	ETH_BufferTypeDef *p = NULL;
+  ETH_BufferTypeDef **ppStart = (ETH_BufferTypeDef **)pStart;
+  ETH_BufferTypeDef **ppEnd = (ETH_BufferTypeDef **)pEnd;
+  ETH_BufferTypeDef *p = NULL;
 
-	p = (ETH_BufferTypeDef *)(buff - offsetof(ETH_AppBuff, buffer));
-    p->next = NULL;
-	p->len = 900;
+  p = (ETH_BufferTypeDef *)(buff - offsetof(ETH_AppBuff, buffer));
+  p->next = NULL;
+  p->len = 900;
 
-	/* Chain the buffer. */
-	if (!*ppStart)
-	{
-	  /* The first buffer of the packet. */
-	  *ppStart = p;
-	}
-	else
-	{
-	  /* Chain the buffer to the end of the packet. */
-	  (*ppEnd)->next = p;
-	}
-	*ppEnd  = p;
+  /* Chain the buffer. */
+  if (!*ppStart)
+  {
+    /* The first buffer of the packet. */
+    *ppStart = p;
+  }
+  else
+  {
+    /* Chain the buffer to the end of the packet. */
+    (*ppEnd)->next = p;
+  }
+  *ppEnd = p;
 }
 
+int __io_putchar(int ch)
+{
+  /* Place your implementation of fputc here */
+  /* e.g. write a character to the USART3 and Loop until the end of transmission */
+  HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, 0xFFFF);
+
+  return ch;
+}
 /* USER CODE END 4 */
 
- /* MPU Configuration */
+/* MPU Configuration */
 
 void MPU_Config(void)
 {
@@ -700,7 +798,7 @@ void MPU_Config(void)
   HAL_MPU_Disable();
 
   /** Initializes and configures the Region and the memory to be protected
-  */
+   */
   MPU_InitStruct.Enable = MPU_REGION_ENABLE;
   MPU_InitStruct.Number = MPU_REGION_NUMBER0;
   MPU_InitStruct.BaseAddress = 0x0;
@@ -716,13 +814,12 @@ void MPU_Config(void)
   HAL_MPU_ConfigRegion(&MPU_InitStruct);
   /* Enables the MPU */
   HAL_MPU_Enable(MPU_PRIVILEGED_DEFAULT);
-
 }
 
 /**
-  * @brief  This function is executed in case of error occurrence.
-  * @retval None
-  */
+ * @brief  This function is executed in case of error occurrence.
+ * @retval None
+ */
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
@@ -734,14 +831,14 @@ void Error_Handler(void)
   /* USER CODE END Error_Handler_Debug */
 }
 
-#ifdef  USE_FULL_ASSERT
+#ifdef USE_FULL_ASSERT
 /**
-  * @brief  Reports the name of the source file and the source line number
-  *         where the assert_param error has occurred.
-  * @param  file: pointer to the source file name
-  * @param  line: assert_param error line source number
-  * @retval None
-  */
+ * @brief  Reports the name of the source file and the source line number
+ *         where the assert_param error has occurred.
+ * @param  file: pointer to the source file name
+ * @param  line: assert_param error line source number
+ * @retval None
+ */
 void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */
