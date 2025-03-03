@@ -49,11 +49,27 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     C:/stm32/ETH/Core/Src/lan8742.c
     C:/stm32/ETH/Core/Src/parseSV.c
+    C:/stm32/ETH/data/data.c
+
+    C:/stm32/ETH/DSP/Source/TransformFunctions/arm_cfft_f32.c
+    C:/stm32/ETH/DSP/Source/ComplexMathFunctions/arm_cmplx_mag_f32.c
+    C:/stm32/ETH/DSP/Source/TransformFunctions/arm_bitreversal2.c
+    C:/stm32/ETH/DSP/Source/TransformFunctions/arm_cfft_radix8_f32.c
+    C:/stm32/ETH/DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.c
+    C:/stm32/ETH/DSP/Source/TransformFunctions/arm_rfft_fast_f32.c
+    C:/stm32/ETH/DSP/Source/CommonTables/arm_common_tables.c
+
+    C:/stm32/ETH/FFT/fft.c
+
 # Add user sources here
 )
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
+    C:/stm32/ETH/DSP/Include
+    C:/stm32/ETH/Drivers/CMSIS/Include
+    C:/stm32/ETH/Drivers/CMSIS/Core/Include
+    C:/stm32/ETH/FFT
     # Add user defined include paths
 )
 
@@ -71,6 +87,9 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
 
 set(CMAKE_C_FLAGS_DEBUG "-O0 -g3")
 set(CMAKE_C_FLAGS_RELEASE "-O2")
+
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -u _printf_float")
+
 
 
 add_compile_options(

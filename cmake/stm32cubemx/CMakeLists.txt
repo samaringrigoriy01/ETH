@@ -19,6 +19,7 @@ target_include_directories(stm32cubemx INTERFACE
     ../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy
     ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include
     ../../Drivers/CMSIS/Include
+    ../../Middlewares/ST/ARM/DSP/Inc
 )
 
 target_sources(stm32cubemx INTERFACE

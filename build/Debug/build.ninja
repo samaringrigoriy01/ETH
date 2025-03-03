@@ -53,7 +53,7 @@ build CMakeFiles/ETH.dir/Core/Src/lan8742.c.obj: C_COMPILER__ETH_unscanned_Debug
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Core\Src\lan8742.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Core\Src
 
@@ -61,15 +61,87 @@ build CMakeFiles/ETH.dir/Core/Src/parseSV.c.obj: C_COMPILER__ETH_unscanned_Debug
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Core\Src\parseSV.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Core\Src
+
+build CMakeFiles/ETH.dir/data/data.c.obj: C_COMPILER__ETH_unscanned_Debug C$:/stm32/ETH/data/data.c || cmake_object_order_depends_target_ETH
+  DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
+  DEP_FILE = CMakeFiles\ETH.dir\data\data.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
+  OBJECT_DIR = CMakeFiles\ETH.dir
+  OBJECT_FILE_DIR = CMakeFiles\ETH.dir\data
+
+build CMakeFiles/ETH.dir/DSP/Source/TransformFunctions/arm_cfft_f32.c.obj: C_COMPILER__ETH_unscanned_Debug C$:/stm32/ETH/DSP/Source/TransformFunctions/arm_cfft_f32.c || cmake_object_order_depends_target_ETH
+  DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
+  DEP_FILE = CMakeFiles\ETH.dir\DSP\Source\TransformFunctions\arm_cfft_f32.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
+  OBJECT_DIR = CMakeFiles\ETH.dir
+  OBJECT_FILE_DIR = CMakeFiles\ETH.dir\DSP\Source\TransformFunctions
+
+build CMakeFiles/ETH.dir/DSP/Source/ComplexMathFunctions/arm_cmplx_mag_f32.c.obj: C_COMPILER__ETH_unscanned_Debug C$:/stm32/ETH/DSP/Source/ComplexMathFunctions/arm_cmplx_mag_f32.c || cmake_object_order_depends_target_ETH
+  DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
+  DEP_FILE = CMakeFiles\ETH.dir\DSP\Source\ComplexMathFunctions\arm_cmplx_mag_f32.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
+  OBJECT_DIR = CMakeFiles\ETH.dir
+  OBJECT_FILE_DIR = CMakeFiles\ETH.dir\DSP\Source\ComplexMathFunctions
+
+build CMakeFiles/ETH.dir/DSP/Source/TransformFunctions/arm_bitreversal2.c.obj: C_COMPILER__ETH_unscanned_Debug C$:/stm32/ETH/DSP/Source/TransformFunctions/arm_bitreversal2.c || cmake_object_order_depends_target_ETH
+  DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
+  DEP_FILE = CMakeFiles\ETH.dir\DSP\Source\TransformFunctions\arm_bitreversal2.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
+  OBJECT_DIR = CMakeFiles\ETH.dir
+  OBJECT_FILE_DIR = CMakeFiles\ETH.dir\DSP\Source\TransformFunctions
+
+build CMakeFiles/ETH.dir/DSP/Source/TransformFunctions/arm_cfft_radix8_f32.c.obj: C_COMPILER__ETH_unscanned_Debug C$:/stm32/ETH/DSP/Source/TransformFunctions/arm_cfft_radix8_f32.c || cmake_object_order_depends_target_ETH
+  DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
+  DEP_FILE = CMakeFiles\ETH.dir\DSP\Source\TransformFunctions\arm_cfft_radix8_f32.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
+  OBJECT_DIR = CMakeFiles\ETH.dir
+  OBJECT_FILE_DIR = CMakeFiles\ETH.dir\DSP\Source\TransformFunctions
+
+build CMakeFiles/ETH.dir/DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.c.obj: C_COMPILER__ETH_unscanned_Debug C$:/stm32/ETH/DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.c || cmake_object_order_depends_target_ETH
+  DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
+  DEP_FILE = CMakeFiles\ETH.dir\DSP\Source\TransformFunctions\arm_rfft_fast_init_f32.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
+  OBJECT_DIR = CMakeFiles\ETH.dir
+  OBJECT_FILE_DIR = CMakeFiles\ETH.dir\DSP\Source\TransformFunctions
+
+build CMakeFiles/ETH.dir/DSP/Source/TransformFunctions/arm_rfft_fast_f32.c.obj: C_COMPILER__ETH_unscanned_Debug C$:/stm32/ETH/DSP/Source/TransformFunctions/arm_rfft_fast_f32.c || cmake_object_order_depends_target_ETH
+  DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
+  DEP_FILE = CMakeFiles\ETH.dir\DSP\Source\TransformFunctions\arm_rfft_fast_f32.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
+  OBJECT_DIR = CMakeFiles\ETH.dir
+  OBJECT_FILE_DIR = CMakeFiles\ETH.dir\DSP\Source\TransformFunctions
+
+build CMakeFiles/ETH.dir/DSP/Source/CommonTables/arm_common_tables.c.obj: C_COMPILER__ETH_unscanned_Debug C$:/stm32/ETH/DSP/Source/CommonTables/arm_common_tables.c || cmake_object_order_depends_target_ETH
+  DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
+  DEP_FILE = CMakeFiles\ETH.dir\DSP\Source\CommonTables\arm_common_tables.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
+  OBJECT_DIR = CMakeFiles\ETH.dir
+  OBJECT_FILE_DIR = CMakeFiles\ETH.dir\DSP\Source\CommonTables
+
+build CMakeFiles/ETH.dir/FFT/fft.c.obj: C_COMPILER__ETH_unscanned_Debug C$:/stm32/ETH/FFT/fft.c || cmake_object_order_depends_target_ETH
+  DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
+  DEP_FILE = CMakeFiles\ETH.dir\FFT\fft.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
+  OBJECT_DIR = CMakeFiles\ETH.dir
+  OBJECT_FILE_DIR = CMakeFiles\ETH.dir\FFT
 
 build CMakeFiles/ETH.dir/Core/Src/main.c.obj: C_COMPILER__ETH_unscanned_Debug C$:/stm32/ETH/Core/Src/main.c || cmake_object_order_depends_target_ETH
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Core\Src\main.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Core\Src
 
@@ -77,7 +149,7 @@ build CMakeFiles/ETH.dir/Core/Src/stm32h7xx_it.c.obj: C_COMPILER__ETH_unscanned_
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Core\Src\stm32h7xx_it.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Core\Src
 
@@ -85,7 +157,7 @@ build CMakeFiles/ETH.dir/Core/Src/stm32h7xx_hal_msp.c.obj: C_COMPILER__ETH_unsca
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Core\Src\stm32h7xx_hal_msp.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Core\Src
 
@@ -93,7 +165,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_cortex.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -101,7 +173,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.ob
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -109,7 +181,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc_ex.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -117,7 +189,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c.
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_flash.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -125,7 +197,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_flash_ex.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -133,7 +205,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.o
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_gpio.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -141,7 +213,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c.o
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_hsem.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -149,7 +221,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.ob
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -157,7 +229,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma_ex.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -165,7 +237,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c.o
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_mdma.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -173,7 +245,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c.ob
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -181,7 +253,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr_ex.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -189,7 +261,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj: C
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -197,7 +269,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c.ob
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2c.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -205,7 +277,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2c_ex.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -213,7 +285,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c.o
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_exti.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -221,7 +293,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_eth.c.ob
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_eth.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -229,7 +301,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_eth_ex.c
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_eth_ex.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -237,7 +309,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi.c.ob
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_spi.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -245,7 +317,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi_ex.c
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_spi_ex.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -253,7 +325,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.o
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_uart.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -261,7 +333,7 @@ build CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_uart_ex.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
@@ -269,7 +341,7 @@ build CMakeFiles/ETH.dir/Core/Src/system_stm32h7xx.c.obj: C_COMPILER__ETH_unscan
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Core\Src\system_stm32h7xx.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Core\Src
 
@@ -277,7 +349,7 @@ build CMakeFiles/ETH.dir/Core/Src/sysmem.c.obj: C_COMPILER__ETH_unscanned_Debug 
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Core\Src\sysmem.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Core\Src
 
@@ -285,7 +357,7 @@ build CMakeFiles/ETH.dir/Core/Src/syscalls.c.obj: C_COMPILER__ETH_unscanned_Debu
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\Core\Src\syscalls.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir\Core\Src
 
@@ -293,7 +365,7 @@ build CMakeFiles/ETH.dir/startup_stm32h750xx.s.obj: ASM_COMPILER__ETH_unscanned_
   DEFINES = -DDEBUG -DSTM32H750xx -DUSE_HAL_DRIVER -DUSE_PWR_LDO_SUPPLY
   DEP_FILE = CMakeFiles\ETH.dir\startup_stm32h750xx.s.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -x assembler-with-cpp -MMD -MP -g
-  INCLUDES = -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/stm32/ETH/DSP/Include -IC:/stm32/ETH/Drivers/CMSIS/Include -IC:/stm32/ETH/Drivers/CMSIS/Core/Include -IC:/stm32/ETH/FFT -IC:/stm32/ETH/cmake/stm32cubemx/../../Core/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Drivers/CMSIS/Include -IC:/stm32/ETH/cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc
   OBJECT_DIR = CMakeFiles\ETH.dir
   OBJECT_FILE_DIR = CMakeFiles\ETH.dir
 
@@ -305,8 +377,9 @@ build CMakeFiles/ETH.dir/startup_stm32h750xx.s.obj: ASM_COMPILER__ETH_unscanned_
 #############################################
 # Link the executable ETH.elf
 
-build ETH.elf: C_EXECUTABLE_LINKER__ETH_Debug CMakeFiles/ETH.dir/Core/Src/lan8742.c.obj CMakeFiles/ETH.dir/Core/Src/parseSV.c.obj CMakeFiles/ETH.dir/Core/Src/main.c.obj CMakeFiles/ETH.dir/Core/Src/stm32h7xx_it.c.obj CMakeFiles/ETH.dir/Core/Src/stm32h7xx_hal_msp.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_eth.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_eth_ex.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi_ex.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj CMakeFiles/ETH.dir/Core/Src/system_stm32h7xx.c.obj CMakeFiles/ETH.dir/Core/Src/sysmem.c.obj CMakeFiles/ETH.dir/Core/Src/syscalls.c.obj CMakeFiles/ETH.dir/startup_stm32h750xx.s.obj
+build ETH.elf: C_EXECUTABLE_LINKER__ETH_Debug CMakeFiles/ETH.dir/Core/Src/lan8742.c.obj CMakeFiles/ETH.dir/Core/Src/parseSV.c.obj CMakeFiles/ETH.dir/data/data.c.obj CMakeFiles/ETH.dir/DSP/Source/TransformFunctions/arm_cfft_f32.c.obj CMakeFiles/ETH.dir/DSP/Source/ComplexMathFunctions/arm_cmplx_mag_f32.c.obj CMakeFiles/ETH.dir/DSP/Source/TransformFunctions/arm_bitreversal2.c.obj CMakeFiles/ETH.dir/DSP/Source/TransformFunctions/arm_cfft_radix8_f32.c.obj CMakeFiles/ETH.dir/DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.c.obj CMakeFiles/ETH.dir/DSP/Source/TransformFunctions/arm_rfft_fast_f32.c.obj CMakeFiles/ETH.dir/DSP/Source/CommonTables/arm_common_tables.c.obj CMakeFiles/ETH.dir/FFT/fft.c.obj CMakeFiles/ETH.dir/Core/Src/main.c.obj CMakeFiles/ETH.dir/Core/Src/stm32h7xx_it.c.obj CMakeFiles/ETH.dir/Core/Src/stm32h7xx_hal_msp.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_eth.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_eth_ex.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi_ex.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj CMakeFiles/ETH.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj CMakeFiles/ETH.dir/Core/Src/system_stm32h7xx.c.obj CMakeFiles/ETH.dir/Core/Src/sysmem.c.obj CMakeFiles/ETH.dir/Core/Src/syscalls.c.obj CMakeFiles/ETH.dir/startup_stm32h750xx.s.obj
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -O0 -g3
+  LINK_FLAGS = -u _printf_float
   OBJECT_DIR = CMakeFiles\ETH.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
