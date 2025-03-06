@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"name": "ETH",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"main.h": "c",
+			"stm32f4xx_hal.h": "c",
+			"stm32f4xx_hal_conf.h": "c",
+			"stm32f4xx.h": "c",
+			"parsesv.h": "c",
+			"stdint.h": "c",
+			"stdlib.h": "c",
+			"arm_math.h": "c",
+			"stdbool.h": "c",
+			"cmsis_compiler.h": "c",
+			"float.h": "c",
+			"string.h": "c",
+			"math.h": "c",
+			"arm_common_tables.h": "c",
+			"lan8742.h": "c"
+		},
+		"cortex-debug.variableUseNaturalFormat": true
+	}
+}

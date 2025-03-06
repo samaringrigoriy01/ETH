@@ -1,3 +1,7 @@
+#include "main.h"
+
+#include "stdio.h"
+
 
 #include "fft.h"
 
@@ -5,26 +9,26 @@
 
 #define SAMPLE_RATE 12800 // Частота дискретизации
 
-float magnitude[FFT_SIZE / 2]; // Амплитудный спектр
-
 arm_rfft_fast_instance_f32 fftInstance; // Экземпляр RFFT
 
-float *ComputeFFT(float *fftInput, float *fftOutput)
+float *computeFFT(float *fftInput, float *amplitude)
 {
     // Инициализация RFFT
     arm_rfft_fast_init_f32(&fftInstance, FFT_SIZE);
+
+    float fftOutput[FFT_SIZE+2] = {0};
 
     // Выполнение прямого БПФ (RFFT)
     arm_rfft_fast_f32(&fftInstance, fftInput, fftOutput, 0);
 
     // Вычисление амплитуды спектра (модуль комплексных значений)
-    // Вычисление амплитуды спектра (модуль комплексных значений)
     for (uint32_t i = 0; i <= 128; i++)
     {
         float real = fftOutput[2 * i];                                    // Реальная часть
         float imag = fftOutput[2 * i + 1];                                // Мнимая часть
-        magnitude[i] = sqrtf(real * real + imag * imag) / (FFT_SIZE / 2); // Вычисление модуля
+        amplitude[i] = sqrtf(real * real + imag * imag) / (FFT_SIZE / 2); // Вычисление модуля
     }
+    return amplitude;
 }
 
 void PrintHarmonics(float *fftOutput, uint32_t fftSize, float sampleRate)

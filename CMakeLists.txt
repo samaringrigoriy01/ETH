@@ -59,6 +59,8 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     C:/stm32/ETH/DSP/Source/TransformFunctions/arm_rfft_fast_f32.c
     C:/stm32/ETH/DSP/Source/CommonTables/arm_common_tables.c
 
+    C:/stm32/ETH/DSP/Source/SupportFunctions/arm_q31_to_float.c
+
     C:/stm32/ETH/FFT/fft.c
 
 # Add user sources here

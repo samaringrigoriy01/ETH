@@ -6,6 +6,12 @@
 #define FB_CURRENT_C 80
 #define FB_CURRENT_0 88 
 
+#define FB_VOLTAGE_A 96
+#define FB_VOLTAGE_B 104
+#define FB_VOLTAGE_C 112
+#define FB_VOLTAGE_0 120 
+
+
 #define SMPCNT_ASDU_1 51
 #define SMPCNT_ASDU_8 716
 
